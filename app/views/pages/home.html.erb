@@ -1,3 +1,6 @@
 <h1>Wellcome</h1>
 <br>
-<p></p>
+<h2>These are your keys</h2>
+<p>
+  <%= Rails.application.credentials.dig(:secret_key_base) %>
+</p>
