@@ -1,6 +1,19 @@
 <h1>Wellcome</h1>
 <br>
 <h2>These are your keys</h2>
-<p>
-  <%= Rails.application.credentials.dig(:secret_key_base) %>
+<br>
+<p class="card p-3 bg-light">
+  <strong>Rails.application.credentials.dig(:secret_key_base)</strong> <%= Rails.application.credentials.dig(:secret_key_base) %>
+</p>
+<p class="card p-3 bg-light">
+  <strong>Rails.application.credentials.dig(:vim_key)</strong> <%= Rails.application.credentials.dig(:vim_key) %>
+</p>
+<p class="card p-3 bg-light">
+  <strong>Rails.application.credentials.dig(:this_is_subl)</strong> <%= Rails.application.credentials.dig(:this_is_subl) %>
+</p>
+<p class="card p-3 bg-light">
+  <strong>Rails.application.credentials.dig(:development, :demo_key)</strong> <%= Rails.application.credentials.dig(:development, :demo_key) %>
+</p>
+<p class="card p-3 bg-light">
+  <strong>Rails.application.credentials.dig(Rails.env.to_sym, :demo_key)</strong> <%= Rails.application.credentials.dig(Rails.env.to_sym, :demo_key) %>
 </p>
